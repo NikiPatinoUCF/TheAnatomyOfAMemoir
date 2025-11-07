@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how genre conventions shape storytelling. Transform memoir scenes through different genre lenses with interactive demonstrations.">
+    <title>The Anatomy of a Memoir: Genre as Lens</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- P5.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+</head>
+<body>
+    <!-- Background Canvas for P5.js -->
+    <div id="canvas-container"></div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <h1 class="site-title">The Anatomy of a Memoir</h1>
+        <p class="site-subtitle">Genre as Lens</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#teaching">Learn</a></li>
+            <li><a href="#demo">Demo</a></li>
+            <li><a href="#your-text">Try It</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Introduction Section -->
+        <section id="intro" class="section intro-section">
+            <div class="container">
+                <h2 class="section-title">See Your Story Through New Eyes</h2>
+                <p class="intro-text">
+                    Genre isn't a cage—it's a toolkit. Every genre offers distinct craft conventions that shape how readers experience your story.
+                    By understanding how noir uses metaphor, how thrillers build tension, or how fairy tales frame meaning,
+                    you can borrow and blend techniques to make your memoir more powerful.
+                </p>
+                <p class="intro-text">
+                    Watch how the same moment transforms when filtered through different genre lenses.
+                    See what changes—and learn why those changes matter.
+                </p>
+                <a href="#demo" class="cta-button">See How It Works</a>
+            </div>
+        </section>
+
+        <!-- Teaching Section -->
+        <section id="teaching" class="section teaching-section">
+            <div class="container">
+                <h2 class="section-title">Understanding Genre as Craft</h2>
+                <p class="teaching-intro">
+                    Each genre employs specific conventions—choices about voice, pacing, imagery, and structure—that create distinct reading experiences.
+                    Memoir writers can draw from any of these toolkits to serve their story.
+                </p>
+
+                <div class="genre-cards">
+                    <article class="genre-card" data-genre="noir">
+                        <h3 class="genre-title">Noir</h3>
+                        <p class="genre-description">
+                            Uses shadow-and-light metaphors, cynical internal monologue, and moral ambiguity.
+                            Transforms everyday moments into something darker, more psychological.
+                        </p>
+                        <ul class="genre-features">
+                            <li>Hard-boiled voice</li>
+                            <li>Symbolic imagery</li>
+                            <li>Atmospheric mood</li>
+                        </ul>
+                    </article>
+
+                    <article class="genre-card" data-genre="thriller">
+                        <h3 class="genre-title">Thriller</h3>
+                        <p class="genre-description">
+                            Drives urgency through sentence fragments, present tense, and heightened stakes.
+                            Every detail pulses with potential threat.
+                        </p>
+                        <ul class="genre-features">
+                            <li>Rapid pacing</li>
+                            <li>Tension escalation</li>
+                            <li>Immediate stakes</li>
+                        </ul>
+                    </article>
+
+                    <article class="genre-card" data-genre="romance">
+                        <h3 class="genre-title">Romance</h3>
+                        <p class="genre-description">
+                            Emphasizes sensory connection, emotional intimacy, and hopeful possibility.
+                            Makes small gestures carry deep significance.
+                        </p>
+                        <ul class="genre-features">
+                            <li>Emotional focus</li>
+                            <li>Sensory richness</li>
+                            <li>Intimate voice</li>
+                        </ul>
+                    </article>
+
+                    <article class="genre-card" data-genre="literary">
+                        <h3 class="genre-title">Literary Fiction</h3>
+                        <p class="genre-description">
+                            Values interiority, complex sentences, and ambiguity.
+                            Explores layers of meaning through reflection and nuanced observation.
+                        </p>
+                        <ul class="genre-features">
+                            <li>Deep interiority</li>
+                            <li>Layered meaning</li>
+                            <li>Subtle complexity</li>
+                        </ul>
+                    </article>
+
+                    <article class="genre-card" data-genre="horror">
+                        <h3 class="genre-title">Horror</h3>
+                        <p class="genre-description">
+                            Builds dread through what's unseen, unsaid, or not quite right.
+                            Uses sensory unease and atmospheric menace.
+                        </p>
+                        <ul class="genre-features">
+                            <li>Creeping dread</li>
+                            <li>Sensory unease</li>
+                            <li>The uncanny</li>
+                        </ul>
+                    </article>
+
+                    <article class="genre-card" data-genre="fairytale">
+                        <h3 class="genre-title">Fairy Tale</h3>
+                        <p class="genre-description">
+                            Employs archetypal language, moral framing, and timeless patterns.
+                            Makes personal stories feel universal and mythic.
+                        </p>
+                        <ul class="genre-features">
+                            <li>Archetypal language</li>
+                            <li>Moral resonance</li>
+                            <li>Timeless quality</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Demo Section -->
+        <section id="demo" class="section demo-section">
+            <div class="container">
+                <h2 class="section-title">See It In Action</h2>
+                <p class="demo-intro">
+                    Below is a simple memoir scene. Watch how it transforms through different genre lenses.
+                    Each transformation reveals different craft choices—voice, pacing, imagery, emphasis—that shape how readers experience the story.
+                </p>
+
+                <!-- Genre Selector -->
+                <div class="genre-selector">
+                    <button class="genre-button active" data-genre="original">Original</button>
+                    <button class="genre-button" data-genre="noir">Noir</button>
+                    <button class="genre-button" data-genre="thriller">Thriller</button>
+                    <button class="genre-button" data-genre="romance">Romance</button>
+                    <button class="genre-button" data-genre="literary">Literary</button>
+                    <button class="genre-button" data-genre="horror">Horror</button>
+                    <button class="genre-button" data-genre="fairytale">Fairy Tale</button>
+                </div>
+
+                <!-- Comparison View Toggle -->
+                <div class="view-toggle">
+                    <label>
+                        <input type="checkbox" id="comparison-toggle">
+                        <span>Show side-by-side comparison</span>
+                    </label>
+                </div>
+
+                <!-- Text Display Area -->
+                <div class="text-display">
+                    <div class="text-container single-view">
+                        <div class="text-panel" id="original-panel">
+                            <h3 class="panel-title">Original Memoir Scene</h3>
+                            <div class="text-content" id="original-text">
+                                <!-- Content loaded via JavaScript -->
+                            </div>
+                        </div>
+                        <div class="text-panel" id="transformed-panel">
+                            <h3 class="panel-title" id="genre-label">Select a genre</h3>
+                            <div class="text-content" id="transformed-text">
+                                <!-- Content loaded via JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Annotations -->
+                <div class="annotations-container" id="annotations">
+                    <!-- Annotations loaded via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- User Text Input Section -->
+        <section id="your-text" class="section input-section">
+            <div class="container">
+                <h2 class="section-title">Analyze Your Own Scene</h2>
+                <p class="input-intro">
+                    Paste a short memoir scene (50-300 words) to receive educational feedback about how it might transform across different genres.
+                    Your text stays private—nothing is sent to any server.
+                </p>
+
+                <div class="text-input-container">
+                    <textarea
+                        id="user-text-input"
+                        class="user-text-area"
+                        placeholder="Paste your memoir scene here (50-300 words)..."
+                        maxlength="2000"
+                    ></textarea>
+                    <div class="input-controls">
+                        <span class="character-count" id="char-count">0 / 300 words</span>
+                        <button class="analyze-button" id="analyze-btn">Analyze My Scene</button>
+                    </div>
+                </div>
+
+                <div class="analysis-results" id="analysis-results">
+                    <!-- Analysis results loaded via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <h2 class="section-title">Why Genre Matters for Memoir Writers</h2>
+
+                <div class="about-content">
+                    <div class="about-block">
+                        <h3>Genre as Permission</h3>
+                        <p>
+                            Many memoir writers feel constrained by the idea that they must stick to "just the facts."
+                            Understanding genre conventions gives you permission to shape your truth in ways that serve the story.
+                            You're not lying—you're choosing which craft tools will best convey your experience.
+                        </p>
+                    </div>
+
+                    <div class="about-block">
+                        <h3>Making Abstract Concepts Concrete</h3>
+                        <p>
+                            Writers often hear advice like "show don't tell" or "create tension" without understanding how.
+                            Genre provides specific, observable techniques. Want more tension? Look at how thrillers use sentence fragments and present tense.
+                            Want deeper reflection? Study how literary fiction layers meaning through syntax.
+                        </p>
+                    </div>
+
+                    <div class="about-block">
+                        <h3>Your Story, Your Choices</h3>
+                        <p>
+                            This tool isn't about forcing your memoir into a genre box. It's about expanding your awareness of options.
+                            Maybe your childhood memory needs the dread of horror in one scene and the warmth of romance in another.
+                            Maybe your whole memoir benefits from noir's symbolic thinking. You decide.
+                        </p>
+                    </div>
+
+                    <div class="about-block">
+                        <h3>How to Use This Tool</h3>
+                        <ol>
+                            <li>Study the example transformations to see how craft choices create different effects</li>
+                            <li>Note which techniques resonate with your own work</li>
+                            <li>Experiment with applying one or two genre conventions to your scenes</li>
+                            <li>Blend and adapt—you're not writing pure genre fiction, you're borrowing tools</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 The Anatomy of a Memoir. An educational project for memoir writers.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/sketch.js"></script>
+    <script src="js/transformations.js"></script>
+    <script src="js/annotations.js"></script>
+    <script src="js/userAnalysis.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
